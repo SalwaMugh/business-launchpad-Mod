@@ -1,0 +1,60 @@
+{
+  "name": "business-launchpad",
+  "version": "1.0.0",
+  "description": "An app to support young entrepreneurs mentored by the organisation Business Launchpad",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "NODE_ENV=development nodemon server/server.js",
+    "client": "cd client && npm run start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "eslint": "eslint ./server",
+    "eslint:fix": "eslint --fix ./server",
+    "test": "jest .server/tests",
+    "inst": "npm i && cd client && npm i",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/founders-programme-2/business-launchpad.git"
+  },
+  "engines": {
+    "node": "8.9.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/founders-programme-2/business-launchpad/issues"
+  },
+  "homepage": "https://github.com/founders-programme-2/business-launchpad#readme",
+  "dependencies": {
+    "airtable": "^0.6.0",
+    "axios": "^0.19.0",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^4.1.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.14",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^11.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "codecov": "^3.5.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "24.7.1",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^8.8.2",
+    "supertest": "^4.0.2"
+  }
+}
