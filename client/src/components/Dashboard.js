@@ -31,7 +31,7 @@ class Dashboard extends Component {
         </C.P>
 
         <GoalProgress />
-        <CFooter />
+        <CFooter positionDistance="-25rem"/>
       </Fragment>
     );
   }
