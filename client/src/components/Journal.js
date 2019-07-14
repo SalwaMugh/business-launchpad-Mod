@@ -11,6 +11,7 @@ import Goal from './JournalGoal';
 import { MyContext } from './Context';
 import { GETGOALS_SERVER } from '../constants';
 import Bubble from './CLoading';
+import CFooter from './CFooter';
 
 class Journal extends Component {
   state = {
@@ -116,6 +117,7 @@ class Journal extends Component {
             </S.Section>
           </>
         )}
+        <CFooter/>
       </Fragment>
     );
   }

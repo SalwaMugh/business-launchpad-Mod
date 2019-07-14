@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import * as S from './CFooter.style';
 import { CONTACT_URL, PRIVACY_URL } from '../constants';
 
-const CFooter = () => {
+const CFooter = props => {
+  const { positionDistance } = props;
   return (
-    <S.Footer>
-      <S.Line />
+    <S.Footer positionDistance={positionDistance}>
+      <S.Line/>
       <S.FooterWrapper>
         <Link to={PRIVACY_URL}>
           <S.H3>Privacy Policy</S.H3>
